@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { SiteNav } from "@/components/portfolio/SiteNav";
 import { SiteFooter } from "@/components/portfolio/SiteFooter";
 import { Toaster } from "@/components/ui/sonner";
@@ -144,6 +145,7 @@ function RootComponent() {
         <SiteFooter />
         <Toaster />
       </div>
+      <Analytics />
     </QueryClientProvider>
   );
 }
