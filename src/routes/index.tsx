@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
 });
 
 const quickLinks = [
-  { to: "/projects", label: "Projects", note: "11 shipped systems" },
+  { to: "/projects", label: "Projects", note: "15 shipped systems · ark Ecosystem" },
   { to: "/skills", label: "Skills", note: "8+ languages, DevOps, security" },
   { to: "/tools", label: "Tools & AI Agents", note: "Linux, Shodan, 25+ AI agents" },
   { to: "/certifications", label: "Certifications", note: "25 completed programmes" },
