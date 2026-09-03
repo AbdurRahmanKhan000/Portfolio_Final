@@ -5,7 +5,7 @@ import { useReveal } from "@/hooks/use-reveal";
 
 const title = "Projects — Abdur Rahman Khan";
 const description =
-  "Selected engineering work across offline AI retrieval, strategic simulation, security, desktop apps and embedded systems.";
+  "A growing portfolio of privacy-first products, developer security tools, offline AI systems and resilient desktop applications.";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -26,8 +26,13 @@ function ProjectsPage() {
   useReveal();
   return (
     <>
-      <PageHeader eyebrow="Projects" title="Selected work"
-        description={"Applications spanning offline AI retrieval, strategic simulation, health tracking, secure storage and embedded systems."} />
+      <PageHeader
+        eyebrow="Projects"
+        title="Selected work"
+        description={
+          "A growing portfolio of privacy-first products, developer security tools, offline AI systems and resilient desktop applications."
+        }
+      />
       <Projects />
     </>
   );

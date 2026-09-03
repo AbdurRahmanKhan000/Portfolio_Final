@@ -5,11 +5,7 @@
 
 export const profile = {
   name: "Abdur Rahman Khan",
-  roles: [
-    "DevOps & Cloud Engineer",
-    "Ethical Hacker",
-    "Programming Expert — 8+ Languages",
-  ],
+  roles: ["DevOps & Cloud Engineer", "Ethical Hacker", "Programming Expert — 8+ Languages"],
   tagline:
     "A DevOps and Cloud Computing engineer, ethical hacker, and software engineer with hands-on professional experience across more than eight programming languages — designing, securing and automating systems end to end.",
   location: "Peshawar, Pakistan — open to global opportunities",
@@ -56,80 +52,134 @@ export type Project = {
   summary: string;
   stack: string[];
   href?: string;
+  demo?: string;
+  category: "ark" | "selected";
 };
 
 export const projects: Project[] = [
   {
-    name: "DocuBrain",
+    name: "arkDownload",
+    category: "ark",
     summary:
-      "Privacy-first desktop AI document intelligence platform running Retrieval-Augmented Generation fully offline. Powered by Llama 3.2 1B and Nomic Embed Text via Ollama, built natively in JavaFX with AtlantaFX and Ikonli, multi-threaded response streaming through LangChain4j, and MySQL persistence with HikariCP pooling.",
+      "Multi-platform desktop media extractor and transcoder for 1,700+ platforms, with asynchronous PyQt6 workers, yt-dlp stream extraction, FFmpeg muxing and browser-level TLS impersonation via curl-cffi.",
+    stack: ["Python", "PyQt6", "yt-dlp", "FFmpeg", "curl-cffi"],
+  },
+  {
+    name: "arkPrivate",
+    category: "ark",
+    summary:
+      "Encrypted desktop VPN system that captures Layer 3 traffic through Wintun or TUN adapters, applies WireGuard cryptography, manages routes and enforces a firewall kill-switch.",
+    stack: ["Python", "WireGuard", "Wintun / TUN", "UDP", "nftables"],
+  },
+  {
+    name: "arkSnap",
+    category: "ark",
+    summary:
+      "High-performance screen capture and 60 FPS recording utility with a floating PyQt6 palette, precision snipping overlay, mss capture buffers and asynchronous FFmpeg hardware encoding.",
+    stack: ["Python", "PyQt6", "mss", "FFmpeg", "QThread"],
+  },
+  {
+    name: "arkBrowse",
+    category: "ark",
+    summary:
+      "Privacy-first custom desktop browser built on QtWebEngine and Chromium, with HTTPS upgrades, tracking-parameter filtering, persistent themes and standalone PyInstaller packaging.",
+    stack: ["Python", "PyQt6", "QtWebEngine", "PyInstaller", "QSettings"],
+  },
+  {
+    name: "arkEngine",
+    category: "ark",
+    summary:
+      "Asynchronous privacy metasearch backend for arkBrowse. FastAPI and httpx concurrently query public providers, strip tracking redirects and return clean, local-first results without paid API keys.",
+    stack: ["Python", "FastAPI", "httpx", "HTML Parsing", "Async I/O"],
+  },
+  {
+    name: "arkType",
+    category: "ark",
+    summary:
+      "Focused typing performance platform with multiple test modes, live WPM and accuracy tracking, guided learning, theme personalization and downloadable achievement certificates.",
+    stack: ["TypeScript", "React", "Responsive UI", "PDF Generation"],
+    href: "https://github.com/AbdurRahmanKhan000/arkType",
+    demo: "https://arktype.vercel.app/",
+  },
+  {
+    name: "GitGuard",
+    category: "selected",
+    summary:
+      "Zero-telemetry system-wide pre-commit shield that blocks credential leaks before they enter Git history, using diff-only scanning, pre-compiled regex, multithreaded auditing and fail-safe protection defaults.",
+    stack: ["Python 3.11", "CustomTkinter", "Git Hooks", "Regex", "Threading"],
+  },
+  {
+    name: "Automated Media Forensics & Threat Analysis",
+    category: "selected",
+    summary:
+      "Multi-threaded forensic pipeline that inspects EXIF privacy leaks, exposes image manipulation with OpenCV ELA and detects steganographic payloads with YARA, backed by MongoDB and SQLite.",
+    stack: ["Python", "CustomTkinter", "OpenCV", "YARA", "MongoDB"],
+    href: "https://github.com/AbdurRahmanKhan000/Media-Forensics-Pipeline",
+  },
+  {
+    name: "DocuBrain",
+    category: "selected",
+    summary:
+      "Privacy-first desktop AI document intelligence platform running RAG fully offline with Ollama, LangChain4j, JavaFX and pooled MySQL persistence.",
     stack: ["JavaFX", "LangChain4j", "Ollama", "MySQL", "HikariCP"],
   },
   {
     name: "WarWind",
+    category: "selected",
     summary:
-      "AI-powered strategic intelligence and cyber defense platform that simulates, analyses and visualises geopolitical, cybersecurity and economic scenarios. Combines a synthetic intelligence engine, lightweight ML models, interactive maps, speech-based alerts, secure auth and REST APIs. Led code review, systematic testing and debugging.",
+      "AI-powered strategic intelligence and cyber defense platform for simulating and visualising geopolitical, cybersecurity and economic scenarios through REST APIs and lightweight ML.",
     stack: ["Java", "Spring Boot", "MongoDB", "Python", "JavaScript"],
     href: "https://github.com/AbdurRahmanKhan000/WarWind",
   },
   {
     name: "Auto Grading Project",
+    category: "selected",
     summary:
-      "Automated grading system that evaluates student submissions programmatically, reducing manual marking effort with consistent, rule-driven scoring and structured result reporting.",
+      "Automated grading system that evaluates student submissions with consistent rule-driven scoring and structured result reporting.",
     stack: ["Python", "Automation", "Data Processing"],
     href: "https://github.com/AbdurRahmanKhan000/Auto-Grading-Project",
   },
   {
     name: "MediaCore Ultra Studio",
+    category: "selected",
     summary:
-      "All-in-one media processing studio for converting, editing and exporting audio and video assets through a single streamlined desktop workflow and batch-friendly pipeline.",
+      "Batch-friendly desktop media processing studio for converting, editing and exporting audio and video assets through one streamlined workflow.",
     stack: ["Python", "Media Processing", "Desktop UI"],
     href: "https://github.com/AbdurRahmanKhan000/MediaCore-Ultra-Studio",
   },
   {
     name: "ResearchPilot AI",
+    category: "selected",
     summary:
-      "Lightweight AI research workspace for students and researchers: intelligent PDF analysis, citation-backed Q&A, paper comparison, literature review generation, research-gap discovery, AI notes, flashcards, quizzes and multi-format exports.",
+      "AI research workspace for PDF analysis, citation-backed Q&A, paper comparison, literature review generation and multi-format exports.",
     stack: ["Python 3.11", "PySide6", "RAG", "MySQL", "MongoDB"],
   },
   {
     name: "Health Tracker System",
+    category: "selected",
     summary:
-      "Desktop wellness application pairing water intake monitoring with a food diary and calorie calculations. Clean MVC structure over JDBC and Maven, with real-time database updates, tabbed navigation and automated daily summaries.",
+      "Desktop wellness application pairing water intake monitoring with a food diary, calorie calculations, MVC structure and real-time JDBC updates.",
     stack: ["JavaFX", "MySQL", "JDBC", "Maven"],
     href: "https://github.com/AbdurRahmanKhan000/Health-Tracker-System",
   },
   {
     name: "Secure Offline Vault",
+    category: "selected",
     summary:
-      "Zero-trust web app for encrypted journaling, work notes and file storage that runs fully offline. PBKDF2 key derivation with AES-GCM 256-bit client-side encryption, rich-text editor, drag-and-drop encrypted vault, full-text search and JSON backup portability.",
+      "Offline zero-trust web app for encrypted journaling, notes and file storage using PBKDF2 key derivation, AES-GCM encryption and portable JSON backups.",
     stack: ["HTML5", "CSS3", "JavaScript ES6+", "Web Crypto API"],
   },
   {
     name: "MediQuery",
+    category: "selected",
     summary:
-      "AI-augmented medicine information system bridging natural-language symptom descriptions with structured pharmaceutical data. Gemini 1.5 extracts medical keywords and builds parameterized SQL over a 3NF MySQL schema with B+ tree indexes and FULLTEXT search.",
+      "AI-augmented medicine information system that maps natural-language symptoms to structured pharmaceutical data and parameterized SQL over a normalized schema.",
     stack: ["Python", "Flask", "MySQL 8.0", "Gemini 1.5"],
   },
-  {
-    name: "Smart Home Control Simulation",
-    summary:
-      "Object-oriented Java program implementing member, static, local and anonymous classes to manage smart light and thermostat controls, with clean architecture and correct instantiation across multiple simulated hardware states.",
-    stack: ["Java", "OOP", "Clean Architecture"],
-  },
-  {
-    name: "Digital Logic & Circuit Design",
-    summary:
-      "Theoretical and functional characteristic models for synchronous electronic components (D, T and JK Master-Slave flip-flops), with documented structural logic flow and digital constraints for complex hardware configurations.",
-    stack: ["Digital Logic Design", "Circuit Modelling"],
-  },
-  {
-    name: "Forest Fire Early Warning System",
-    summary:
-      "Embedded safety prototype for real-time thermal sensing. An Arduino Uno reads an IR flame sensor continuously and triggers visual (LED) and acoustic (piezo buzzer) alarms the moment flame-specific infrared wavelengths are detected.",
-    stack: ["Arduino Uno", "Embedded C/C++", "IR Flame Sensor"],
-  },
 ];
+
+export const arkProjects = projects.filter((project) => project.category === "ark");
+export const selectedProjects = projects.filter((project) => project.category === "selected");
 
 export type SkillGroup = { title: string; items: string[] };
 
@@ -201,7 +251,17 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Frontend & UI",
-    items: ["Tailwind CSS", "Responsive Design", "JavaFX", "PySide6", "Figma", "Canva"],
+    items: [
+      "Tailwind CSS",
+      "Responsive Design",
+      "JavaFX",
+      "PySide6",
+      "PyQt6",
+      "QtWebEngine",
+      "CustomTkinter",
+      "Figma",
+      "Canva",
+    ],
   },
   {
     title: "Concepts & Methodologies",
@@ -246,6 +306,10 @@ export const toolGroups: ToolGroup[] = [
       "Vercel",
       "Docker",
       "Postman",
+      "FFmpeg",
+      "yt-dlp",
+      "PyInstaller",
+      "Ollama",
     ],
   },
   {
